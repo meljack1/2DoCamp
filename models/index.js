@@ -1,7 +1,7 @@
 const User = require('./User');
 const Todo = require('./Todo');
 
-User.hasOne(Todo, {
+User.hasMany(Todo, {
   foreignKey: 'user_id',
   onDelete: 'CASCADE'
 });
