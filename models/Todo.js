@@ -20,7 +20,6 @@ Todo.init(
     },
     date_due: {
       type: DataTypes.DATE,
-      allowNull: false,
     },
     completed: {
       type: DataTypes.BOOLEAN,
