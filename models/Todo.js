@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Post extends Model {}
+class Todo extends Model {}
 
-Post.init(
+Todo.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -17,16 +17,13 @@ Post.init(
     },
     category: {
       type: DataTypes.STRING,
-      allowNull: false,
     },
     date_due: {
       type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
     },
     completed: {
-        type: DataTypes.BOOLEAN,
-      },
+      type: DataTypes.BOOLEAN,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -44,4 +41,4 @@ Post.init(
   }
 );
 
-module.exports = Post;
+module.exports = Todo;
