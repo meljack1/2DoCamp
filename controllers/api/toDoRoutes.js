@@ -15,4 +15,25 @@ router.post("/", withAuth, async(req, res) =>{
     }
 })
 
+router.delete("/:id", withAuth, async(req, res) => {
+    try{
+        const toDoData = await toDo.destroy({
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id,
+            },
+        });
+        
+        if (!toDoData) {
+            res.status(404).json({message: "no toDo item with this id found! "});
+            return;
+        }
+
+        res.status(200).json(toDoData);
+    } catch (error) {
+        res.status(400).json(error);
+    }
+    
+});
+
 module.exports = router;
