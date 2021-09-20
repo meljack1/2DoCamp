@@ -25,21 +25,22 @@
     </div>
   
 <!--Column 2 for the ToDo lists -->
+{{#if logged_in}}
     <div class="feature-item">
       <h2>To do list</h2>
-      <form>
+      <form id="new-todo-form">
         <div class="task">
           <label for="task">New Task</label>
-          <textarea id=task name="task"></textarea>
+          <textarea id="task" name="task"></textarea>
         </div>  
         <br>
-        <div class="completionDate">
-          <label for="date">Completion Date</label>
+        <div class="due-date">
+          <label for="date">Due Date</label>
           <input type="date" name="date" id="date" placeholder="date">
-          <button class="reset">Reset</button>
           <button class="submit">Submit</button>
         </div>
         </form>
     </div>
+  {{/if}}
   </div>
 </div>
