@@ -42,7 +42,10 @@
         </form>
         <section class="created-to-dos">
             <form>
-              <input type="checkbox" id={{todo.id}} name="todo" 
+              {{#each toDos as |todo| }}
+              <input type="checkbox" id="{{todo.id}}" name="todo">
+              <label for="{{todo.id}}">{{todo.task}} </label>
+              {{/each}} 
             </form>
         </section>
     </div>
