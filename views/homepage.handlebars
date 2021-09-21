@@ -40,6 +40,14 @@
           <button class="submit">Submit</button>
         </div>
         </form>
+        <section class="created-to-dos">
+            <form>
+              {{#each toDos as |todo| }}
+              <input type="checkbox" id="{{todo.id}}" name="todo">
+              <label for="{{todo.id}}">{{todo.task}} </label>
+              {{/each}} 
+            </form>
+        </section>
     </div>
 {{/if}}
   </div>
