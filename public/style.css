@@ -38,6 +38,7 @@ text-decoration: underline;
 transform: rotate(6deg);
 }
 
+
 /* list items*/
 
 .menu li {
@@ -61,10 +62,15 @@ padding:7px 15px;
 background-color: cadetblue;
 border:1px solid;
 border-radius: 50em;
-
-
 }
 
+.btn{
+    transition-duration: 0.4s;
+}
+
+.btn:hover {
+      background-color:#EF4444;
+  }
 /* Mobile menu section*/
 
 .menu{
@@ -185,6 +191,13 @@ grid-row-gap: 45px;
     font-size: 0.9rem;
 }
 
+.font-aleo{
+    font-family: 'Aleo', serif;
+}
+
+.font-roboto{
+    font-family: 'Roboto', sans-serif;
+}
 
 
 

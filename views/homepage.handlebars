@@ -1,5 +1,5 @@
 <div class="hero">
-  <div class="hero-inner">
+  <div class="hero-inner font-aleo" >
     <h1>Welcome To Our Site!</h1>
     <p>This site is to help you organise your thoughts and ideas into manageable sizes.  Simply select the "To do button" to create a task, select a date when the task is due, it's that simple!
       Why not try our "Campsite" feature, this will help you to keep things in perspective when the pressure is mounting.</p>
@@ -43,7 +43,7 @@
         <section class="created-to-dos">
             <form>
               {{#each toDos as |todo| }}
-              <input type="checkbox" id="{{todo.id}}" name="todo">
+              <input type="checkbox" id="{{todo.id}}" name="todo" class="font-aleo">
               <label for="{{todo.id}}">{{todo.task}} </label>
               {{/each}} 
             </form>
