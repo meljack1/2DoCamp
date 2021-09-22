@@ -19,4 +19,16 @@ logged_in: req.session.logged_in
 
 })
 
+router.get("/login", (req, res) => {
+    /* we are going to redirect the user into the homepage if they are already logged in. 
+    This prevents users from going into the login page when they have already logged in */
+    if(req.session.logged_in) {
+        res.redirect("/");
+        return;
+    }
+
+    res.render("login");
+});
+
+
 module.exports = router;
