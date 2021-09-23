@@ -1,164 +1,50 @@
-<!DOCTYPE html>
+<!--here I have omitted the doctype declaration-->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To do list</title>
-</head>
-<body>
-    
-</body>
-</html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
-    <!--
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-  -->
-    <link rel="stylesheet" href="/Public/style.css">
-
-</head>
-<body>  
-  <div class="container">
-  <div>
-    <header>
-        <nav>
-          {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
-    {{else}}
-    <a href="/login">Login</a>
-    {{/if}}
-          <ul class="menu">
-            <li class="logo"><a href="#">2DOCamp</a></li>
-            <li class="item"><a href="#">Home</a></li>
-            <li class="item button"><a href="#">Login</a></li>
-            <li class="item button secondary"><a href="#">Sign Up</a></li>
-            <li class="item"><a href="#">Campfire</a></li>
-            <li class="toggle"><span class="bars"></span></li>
-          </ul>
-      </nav>
-    </header>
-  </div>
-
-  <div class="hero">
-   <div class="hero-inner">
-    <h1>Welcome To Our Site!</h1>
-    <P>This site is to help you organise your thoughts and ideas into manageable sizes.  Simply select the "To do button" to create a task, select a date when the task is due, it's that simple!
-      Why not try our "Campsite" feature, this will help you to keep things in perspective when the pressure is mounting.</P>
-
-   </div>
-  </div>
-  <br>
-  <!-- Column 1 for the emoji -->
-<div class="features">
-  <div class="feature-inner">
-    <div class="feature-item">
-      <h3>emoji place holder</h3>
-      <p>To do list- we can help you to get it done!</p>
-    
-      <div class= emoji>
-        <div class="head">
-        <div class="eyes">
-          <div class="eye eye=left eye">
-            <div class="eye eye right eye"></div>
-          </div>
-        
-          <div class="mouth"></div>
-        </div>
-    
-      </div>
-      </div>
-    
-      <!--Column 2 for the ToDo lists -->
-  </div>
-  <div class="feature-item">
-    <h2>To do list</h2>
-    <form>
-      <div class="task">
-        <label for="task">New Task</label>
-          <textarea id=task name="task"></textarea>
-    </div>  
-    <br>
-  
-    <div class="completionDate">
-        <label for="date">Completion Date</label>
-        <input type="date" name="date" id="date" placeholder="date">
-        <button class="reset">Reset</button>
-        <button class="submit">Submit</button>
-      </div>
-      <div class="task">
-        <label for="task">New Task</label>
-          <textarea id=task name="task"></textarea>
-    </div>  
-    <br>
-  
-    <div class="completionDate">
-        <label for="date">Completion Date</label>
-        <input type="date" name="date" id="date" placeholder="date">
-        <button class="reset">Reset</button>
-        <button class="submit">Submit</button>
-      </div>
-      <div class="task">
-        <label for="task">New Task</label>
-          <textarea id=task name="task"></textarea>
-    </div>  
-    <br>
-  
-    <div class="completionDate">
-        <label for="date">Completion Date</label>
-        <input type="date" name="date" id="date" placeholder="date">
-        <button class="reset">Reset</button>
-        <button class="submit">Submit</button>
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>2DoCamp</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com"> 
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+      <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aleo&display=swap" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Aleo&family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+      {{!-- <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> --}}
+      <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>  
+    <div class="container">
+      <div>
+        <header>
+            <nav class="font-roboto">
+              {{#if loggedIn}}
+              <button id="logout" class="btn-no-style">logout</button>
+              {{else}}
+              <a href="/login">Login</a>
+              {{/if}}
+              <ul class="menu">
+                <li class="logo"><a href="#">2DOCamp</a></li>
+                <li class="item"><a href="#">Home</a></li>
+                <li class="item button secondary btn"><a href="#">Login</a></li>
+                <li class="item button secondary btn"><a href="#">Sign Up</a></li>
+                <li class="item"><a href="#">Campfire</a></li>
+                <li class="toggle"><span class="bars"></span></li>
+              </ul>
+          </nav>
+        </header>
       </div>
 
-      <div class="task">
-        <label for="task">New Task</label>
-          <textarea id=task name="task"></textarea>
-    </div>  
-    <br>
-  
-    <div class="completionDate">
-        <label for="date">Completion Date</label>
-        <input type="date" name="date" id="date" placeholder="date">
-        <button class="reset">Reset</button>
-        <button class="submit">Submit</button>
-      </div>
-    </form>
-</div>
-</div>
-</div>
-    
+    {{{body}}}
+    </div>     
 
+    <div class="footer">
+      <p> &copy 2DOCamp</p>
+    </div>
+  </body>
 
-        </div>
-      </div>
-      <section>
-        
-      
-        
-    
-      
-    
-
-
-
-
-<div class="footer">
-  <p> &copy 2DOCamp</p>
-</div>
-
-
-
-
-      
-
-</div>
-</body>
 </html>
