@@ -3,11 +3,7 @@ const { Todo } = require('../models');
 
 router.get("/", async (req, res) => {
     try {/* Gathering all the to do notes from the user data */
-        const toDoData = await Todo.findAll({
-            where: {
-                user_id: req.session.user_id
-            }
-        })
+        const toDoData = await Todo.findAll()
    
         /*Below serializes data so the template can read it.*/
         const toDos = toDoData.map((toDo) => toDo.get({ plain: true }));

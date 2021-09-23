@@ -41,6 +41,7 @@
         </div>
         </form>
         <section class="created-to-dos">
+          {{#if toDos.length }}
             <form>
               {{#each toDos as |todo| }}
               {{#unless todo.completed}}
@@ -50,6 +51,7 @@
               {{/unless}}
               {{/each}} 
             </form>
+            {{/if}}
         </section>
     </div>
 {{/if}}

@@ -15,6 +15,24 @@ router.post("/", withAuth, async(req, res) =>{
     }
 })
 
+router.put("/:id", async (req, res) =>{
+    try {
+        const updatedTodo = toDo.update(
+            {
+                completed: req.body.completed
+            },
+            {
+                where: {
+                    id: req.params.id
+                }
+            }
+        );
+        res.status(200).json(updatedTodo);
+    } catch(error) {
+        res.status(400).json(error);
+    }
+})
+
 router.delete("/:id", withAuth, async(req, res) => {
     try{
         const toDoData = await toDo.destroy({
