@@ -1,4 +1,4 @@
-<!--here I have omitted the doctype declaration-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -30,6 +30,11 @@
   <div>
     <header>
         <nav>
+          {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
           <ul class="menu">
             <li class="logo"><a href="#">2DOCamp</a></li>
             <li class="item"><a href="#">Home</a></li>
