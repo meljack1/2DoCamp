@@ -1,0 +1,59 @@
+<div class="hero">
+  <div class="hero-inner font-aleo" >
+    <h1>Welcome To Our Site!</h1>
+    <p>This site is to help you organise your thoughts and ideas into manageable sizes.  Simply select the "To do button" to create a task, select a date when the task is due, it's that simple!
+      Why not try our "Campsite" feature, this will help you to keep things in perspective when the pressure is mounting.</p>
+  </div>
+</div>
+
+<br>
+<div class="features">
+  <div class="feature-inner">
+    <div class="feature-item">
+      <h3>emoji place holder</h3>
+      <p>To do list- we can help you to get it done!</p>
+    
+      <div class= emoji>
+        <div class="head">
+          <div class="eyes">
+            <div class="eye eye=left eye"></div>
+            <div class="eye eye right eye"></div>
+          </div>
+          <div class="mouth"></div>
+        </div>
+      </div>
+    </div>
+  
+<!--Column 2 for the ToDo lists -->
+{{#if logged_in}}
+    <div class="feature-item">
+      <h2>To do list</h2>
+      <form id="new-todo-form">
+        <div class="task">
+          <label for="task">New Task</label>
+          <textarea id="task" name="task"></textarea>
+        </div>  
+        <br>
+        <div class="due-date">
+          <label for="date">Due Date</label>
+          <input type="date" name="date" id="date" placeholder="date">
+          <button class="submit">Submit</button>
+        </div>
+        </form>
+        <section class="created-to-dos">
+            <form>
+              {{#each toDos as |todo| }}
+              <input type="checkbox" id="{{todo.id}}" name="todo" class="font-aleo">
+              <label for="{{todo.id}}">{{todo.task}} </label>
+              {{/each}} 
+            </form>
+        </section>
+    </div>
+{{/if}}
+  </div>
+</div>
+
+{{#if logged_in}}
+<script src="./js/homepage.js"></script>
+{{/if}}
+
