@@ -11,11 +11,15 @@
       <div class="grid-child-1">
         <h2>Welcome back please Login</h2>
         <br>
-        <form action=""method="post">
+        <!--added Id to login form-->
+
+        <form id="loginForm" action="" method="post">
           <p>User Name</p>
-          <input type="text-box" class="text-box" name="user" placeholder="User Name">
+          <!--login-user now has id-->
+          <input type="text-box" class="text-box" id="loginUser" placeholder="User Name">
           <p>Password</p>
-          <input type="password"class="text-box"  name="password" placeholder="Password">
+          <!--login-password now has id-->
+          <input type="password" class="text-box"  id="loginPassword" name="password" placeholder="Password">
           <button type="submit" class="submit-btn">Submit</button>
         </form>
     </div>
@@ -23,14 +27,16 @@
       <div class="grid-child-2">
         <h2>New to this site - please Sign Up</h2>
         <br>
-        <form action=""method="post">
+        <!--added Id to registration form-->
+        <form class="newRegistrationForm" action="" method="post">
           <p>User Name</p>
-          <input type="text" class="text-box" name="user" placeholder="User Name">
-          <p>Email</p>
-          <input type="email" class="text-box" name="email" placeholder="Email">
+          <input type="text" class="text-box" id="nameSignUp" name="user" placeholder="User Name">
+          <p>Email</p> 
+          <input type="email" class="text-box" id="emailSignUp" name="email" placeholder="Email">
           <p>Password</p>
-          <input type="password" class="text-box" name="password" placeholder="Password">
+          <input type="password" class="text-box" id="passwordSignup" name="password" placeholder="Password">
           <button type="submit" class="submit-btn">Submit</button>
     </div>
-
   </div>
+
+  <script src="./js/login.js"></script>
