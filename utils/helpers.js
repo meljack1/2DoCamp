@@ -1,11 +1,11 @@
-const {format, formatDistanceToNow} = require('date-fns');
+const {format, formatDistanceToNow, toDate} = require('date-fns');
 
 module.exports = {
     format_date: (date) => {
-      return format(date, 'MM/dd/yyyy');
+      return format(new Date(date), 'MM/dd/yyyy');
     },
     days_to_completion: (date) => {
-        return formatDistanceToNow(date, { addSuffix: true })
+        return formatDistanceToNow(new Date(date), { addSuffix: true })
     }
   };
   

@@ -46,7 +46,7 @@
               {{#unless todo.completed}}
               <input type="checkbox" id="{{todo.id}}" name="todo" class="font-aleo">
               <label for="{{todo.id}}">{{todo.task}}</label>
-              <p>{{todo.due_date}}</p>
+              <p>Date due: {{format_date todo.date_due}}</p>
               {{/unless}}
               {{/each}} 
             </form>

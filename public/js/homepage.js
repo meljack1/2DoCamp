@@ -2,12 +2,12 @@ const formHandler = async (event) => {
     event.preventDefault();
   
     const task = document.querySelector('#task').value.trim();
-    const dueDate = document.querySelector('#date').value;
+    const date_due = document.querySelector('#date').valueAsNumber;
   
-    if (task && dueDate) {
+    if (task && date_due) {
       const response = await fetch(`/api/todo`, {
         method: 'POST',
-        body: JSON.stringify({ task, dueDate }),
+        body: JSON.stringify({ task, date_due }),
         headers: {
           'Content-Type': 'application/json',
         },
