@@ -1,31 +1,36 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <link rel="stylesheet" href="/views/Public/style.css">
-</head>
+<link rel="stylesheet" href="/login.css">
 
-<body>
-    <div class="container">
-    <form action="/User" method="POST">
-    <h1>Login</h1>
-        <div class="form-group">
-        <label for="">Email</label>
-        <input type="text" class="form-control" required>
-      </div>
-    <div class="form-group">
-        <label for="">Password</label>
-            <input type="password">
-        </div>
-            <label for="">User Name</label>
-            <input type="text" class="form-control" required>
+<div class="hero">
+    <h2 class="h2">Please log in or Sign up here </h2>
+    
     </div>
-        <input type="submit" class="btn" value="login">
+    <!--hero banner ends-->
 
-    </div>  
-</form>
-</div>
-</body>
-</html>
+    <div class="grid-container">
+
+      <div class="grid-child-1">
+        <h2>Welcome back please Login</h2>
+        <br>
+        <form action=""method="post">
+          <p>User Name</p>
+          <input type="text-box" class="text-box" name="user" placeholder="User Name">
+          <p>Password</p>
+          <input type="password"class="text-box"  name="password" placeholder="Password">
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+      <div class="grid-child-2">
+        <h2>New to this site - please Sign Up</h2>
+        <br>
+        <form action=""method="post">
+          <p>User Name</p>
+          <input type="text" class="text-box" name="user" placeholder="User Name">
+          <p>Email</p>
+          <input type="email" class="text-box" name="email" placeholder="Email">
+          <p>Password</p>
+          <input type="password" class="text-box" name="password" placeholder="Password">
+          <button type="submit" class="submit-btn">Submit</button>
+    </div>
+
+  </div>
