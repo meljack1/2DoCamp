@@ -16,7 +16,6 @@ const hbs = exphbs.create({ helpers });
 const sess = {
     secret: 'CDM best group!',
     cookie: {
-      maxAge: 3600,
       httpOnly: true,
       secure: false,
       sameSite: 'strict',
