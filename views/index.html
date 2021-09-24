@@ -1,17 +1,16 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>2DOCamp</title>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/public/login.css">
     <link rel="stylesheet" href="/Public/style.css">
-
+    <link rel="stylesheet" href="/Public/views/Emojistylesheet.css">
 </head>
 <body>  
   <div class="container">
@@ -21,53 +20,70 @@
           <ul class="menu">
             <li class="logo"><a href="#">2DOCamp</a></li>
             <li class="item"><a href="#">Home</a></li>
-            <li class="item-button"><a href="">Login</a></li>
-            <li class="item-button secondary"><a href="#">Sign Up</a></li>
+            <li class="item-button"><a href="./login.html">Login</a></li>
+            <li class="item button secondary"><a href="#">Sign Up</a></li>
             <li class="item"><a href="#">Campfire</a></li>
-            <li class="toggle"><span class="bars"></span></li>
           </ul>
       </nav>
     </header>
   </div>
-  <!-- hero banner-->
   <div class="hero">
-    <h2 class="h2">Please log in or Sign up here </h2>
-    
-    </div>
-    <!--hero banner ends-->
-
-    <div class="grid-container">
-
-      <div class="grid-child-1">
-        <h2>Welcome back please Login</h2>
-        <br>
-        <form action=""method="post">
-          <p>User Name</p>
-          <input type="text-box" class="text-box" name="user" placeholder="User Name">
-          <p>Password</p>
-          <input type="password"class="text-box"  name="password" placeholder="Password">
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
-    </div>
-
-      <div class="grid-child-2">
-        <h2>New to this site - please Sign Up</h2>
-        <br>
-        <form action=""method="post">
-          <p>User Name</p>
-          <input type="text" class="text-box" name="user" placeholder="User Name">
-          <p>Email</p>
-          <input type="email" class="text-box" name="email" placeholder="Email">
-          <p>Password</p>
-          <input type="password" class="text-box" name="password" placeholder="Password">
-          <button type="submit" class="submit-btn">Submit</button>
-    </div>
-
+   <div class="hero-inner">
+    <h1>Welcome To Our Site!</h1>
+    <P>This site is to help you organise your thoughts and ideas into manageable sizes.  Simply select the "To do button" to create a task, select a date when the task is due, it is that simple!
+      Why not try our "Campsite" feature, this will help you to keep things in perspective when the pressure is mounting.
+    </P>
+   </div>
   </div>
+  <br>
+  <!--Parent Div-->
+  <div class="grid-container">
+    <div class="grid-emoji">
+          <h2>New to this site - please Sign Up</h2>
+          <div class="emoji">
+            <div class="head">
+                <div class="eyes">
+                <div class="eye eye-left"></div>
+                <div class="eye eye-right"></div>
+           </div> 
+           <div class="mouth"></div>
+        </div>    
+      </div>
+    </div>
+      
+
+<!---End of first div section  -->
+  
+        <div class="grid-task-bar">
+          <form id="login-form" class="form-width" action=""method="post"><br>
+            <h2>2DO Tasks</h2>
+            <label for="task"></label>
+            <input type="text-box" class="text-box" name="task " placeholder="task"><br>
+            <p>Due date</p>
+            <input type="date" class="box-size" name="date" id="date" placeholder="date"><br>
+            <br>
+            
+            <imput type="textarea" name="message" row ="10" cols="20"></imput>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit" class="submit-btn">Submit</button>
+            <button type="reset" class="submit-btn">Reset</button>
+            <button type="menu" class="submit-btn">logs</button>
+          
+          </form>
+        </div>    
+      </div>
 
     <div class="footer">
-      <p> &copy 2DOCamp 2021</p>
+      <p><bold>&copy 2DOCamp 2021</bold></p>
     </div>
-    
-    
+    <!--main container end tag-->
+  </div> 
+ </body>
+</html>
 
+        
