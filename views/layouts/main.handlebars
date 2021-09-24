@@ -25,9 +25,13 @@
               <ul class="menu">
                  <li class="logo"><a href="/">2DOCamp</a></li>
             <li class="item"><a href="/">Home</a></li>
-            <li class="item-button"><a href="/login">Login</a></li>
-            <li class="item button secondary"><a href="/login">Sign Up</a></li>
-        
+
+            {{#if logged_in}}
+            <li id="logout" class="item-button button secondary">Logout</li>
+            {{else}}
+            <li class="item-button button"><a href="/login">Login</a></li>
+            <li class="item-button button secondary"><a href="/login">Sign Up</a></li>
+            {{/if}}
               </ul>
           </nav>
         </header>
@@ -44,3 +48,5 @@
   </footer>
 
 </html>
+
+<script src="./js/logout.js"></script>
