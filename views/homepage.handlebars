@@ -41,12 +41,17 @@
         </div>
         </form>
         <section class="created-to-dos">
+          {{#if toDos.length }}
             <form>
               {{#each toDos as |todo| }}
+              {{#unless todo.completed}}
               <input type="checkbox" id="{{todo.id}}" name="todo" class="font-aleo">
-              <label for="{{todo.id}}">{{todo.task}} </label>
+              <label for="{{todo.id}}">{{todo.task}}</label>
+              <p>Date due: {{format_date todo.date_due}}</p>
+              {{/unless}}
               {{/each}} 
             </form>
+            {{/if}}
         </section>
     </div>
 {{/if}}

@@ -23,6 +23,7 @@ Todo.init(
     },
     completed: {
       type: DataTypes.BOOLEAN,
+      default: false
     },
     user_id: {
       type: DataTypes.INTEGER,
