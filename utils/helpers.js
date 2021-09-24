@@ -25,7 +25,9 @@ module.exports = {
         "Paul: 1.Opinions don’t define your reality \n 2.Everyone’s Journey is different \n 3..Things always get better with time \n 4.Judgements are a confession of character, \n 5.Overthinking will lead to sadness, 6..You only fail if you quit",
         "Kevin: no matter how difficult it may be, keep pushing through it, you’ll all make it. -Kevin",
         "Jon Courtney: Find a job you love and you will never work a day in your life.- Jon Courtney ",
-        "Faisal: “The greatest teacher, failure is” - Yoda",
+        "Faisal: The greatest teacher, failure is - Yoda",
+        "Dylson Oliveira: All you need to do is improve by 1% everyday, just 1%. - Dylson  ",
+        "Carol Gordon: Running a marathon is no easy task! - every training session will make you stronger -but it’s the mental attitude that makes you a Winner!!! - Carol "
       ];
         var randomIndex = Math.floor(Math.random() * quoteArr.length);
     return quoteArr[randomIndex];
