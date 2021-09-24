@@ -22,8 +22,10 @@ module.exports = {
         "Abdifatah: In order to succeed, we must first believe that we can.",
         "Mel: The world ends with you. If you want to enjoy life, expand your world. You gotta push your horizons out as far as they'll go. -The world ends with you",
         "Mustafa: Compare Yourself To Who You Were Yesterday, Not To Who Someone Else Is Today -Mustafa",
-        "Paul: 1.The past cannot be changed,2.Opinions don’t define your reality,3.Everyone’s Journey is different,4.Things always get better with time,5.Judgements are a confession of character,6.Overthinking will lead to sadness,7.Happiness is found within,8.Positive thoughts creative positive things 9.You only fail if you quit",
-        "Kevin:: no matter how difficult it may be, keep pushing through it, you’ll all make it. -Kevin",
+        "Paul: 1.Opinions don’t define your reality \n 2.Everyone’s Journey is different \n 3..Things always get better with time \n 4.Judgements are a confession of character, \n 5.Overthinking will lead to sadness, 6..You only fail if you quit",
+        "Kevin: no matter how difficult it may be, keep pushing through it, you’ll all make it. -Kevin",
+        "Jon Courtney: Find a job you love and you will never work a day in your life.- Jon Courtney ",
+        "Faisal: “The greatest teacher, failure is” - Yoda",
       ];
         var randomIndex = Math.floor(Math.random() * quoteArr.length);
     return quoteArr[randomIndex];

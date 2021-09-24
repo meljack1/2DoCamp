@@ -2,10 +2,21 @@
     box-sizing:border-box;
 }
 
+<<<<<<< HEAD
 .emoji-container {
 margin: 0;
 justify-content: center;
 align-items: center;
+=======
+body {
+margin: 0;
+background-color:white;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vh;
+>>>>>>> main
 }
 
 
@@ -15,7 +26,11 @@ align-items: center;
     margin: 1rem;
     width: var(--emoji-size);
     height: var(--emoji-size);
+<<<<<<< HEAD
     display: flex;
+=======
+    
+>>>>>>> main
 }
 .head{
 border-radius: 50%;
