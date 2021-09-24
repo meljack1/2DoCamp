@@ -1,64 +1,86 @@
+   <link rel="stylesheet" href="/style.css">
+   <link rel="stylesheet" href="/Emojistylesheet.css">
 <div class="hero">
-  <div class="hero-inner font-aleo" >
+   <div class="hero-inner">
     <h1>Welcome To Our Site!</h1>
-    <p>This site is to help you organise your thoughts and ideas into manageable sizes.  Simply select the "To do button" to create a task, select a date when the task is due, it's that simple!
-      Why not try our "Campsite" feature, this will help you to keep things in perspective when the pressure is mounting.</p>
+    <P>This site is to help you organise your thoughts and ideas into manageable sizes.  Simply select the "To do button" to create a task, select a date when the task is due, it is that simple!
+      Why not try our "Campsite" feature, this will help you to keep things in perspective when the pressure is mounting.
+    </P>
+   </div>
   </div>
-</div>
-
-<br>
-<div class="features">
-  <div class="feature-inner">
-    <div class="feature-item">
-      <h3>emoji place holder</h3>
-      <p>To do list- we can help you to get it done!</p>
-    <p>
-      {{generateQuote}}
-    </p>
-      <div class= emoji>
-        <div class="head">
-          <div class="eyes">
-            <div class="eye eye=left eye"></div>
-            <div class="eye eye right eye"></div>
-          </div>
-          <div class="mouth"></div>
-        </div>
+  <br>
+  <!--Parent Div-->
+  <div class="grid-container">
+    <div class="grid-emoji">
+          <h2>New to this site - please Sign Up</h2>
+          <div class="emoji-container">
+          <div class="emoji">
+            <div class="head">
+                <div class="eyes">
+                <div class="eye eye-left"></div>
+                <div class="eye eye-right"></div>
+           </div> 
+           <div class="mouth"></div>   
+        </div> 
+        </div>   
       </div>
+      <p>{{generateQuote}}</p>
     </div>
-  
-<!--Column 2 for the ToDo lists -->
-{{#if logged_in}}
-    <div class="feature-item">
-      <h2>To do list</h2>
-      <form id="new-todo-form">
+    
+    
+      
+
+<!---End of first div section  -->
+  {{#if logged_in}}
+        <div class="grid-task-bar">
+          <form id="new-todo-form">
+
+            <h2>Add New Task</h2>
         <div class="task">
           <label for="task">New Task</label>
-          <textarea id="task" name="task"></textarea>
-        </div>  
-        <br>
-        <div class="due-date">
+          <input type="text-box" class="text-box" name="task" placeholder="task" id="task">
+          <div class="due-date">
           <label for="date">Due Date</label>
           <input type="date" name="date" id="date" placeholder="date">
-          <button class="submit">Submit</button>
         </div>
+        </div>  
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>        
+        <!--
+        </div>
+        -->
+        <button type="submit" class="submit-btn">Submit</button>
         </form>
-        <section class="created-to-dos">
-          {{#if toDos.length }}
-            <form>
+        </div>  
+
+        <div class="grid-task-bar">
+          <h2>Tasks:</h2>
+          <br>
+          <section class="created-to-dos">
+         {{#if toDos.length }}
+                  <form><br>
+
               {{#each toDos as |todo| }}
               {{#unless todo.completed}}
+              <div class="todo-card">
               <input type="checkbox" id="{{todo.id}}" name="todo" class="font-aleo">
               <label for="{{todo.id}}">{{todo.task}}</label>
-              <p>Date due: {{format_date todo.date_due}}</p>
+              <p>Date due: {{format_date todo.date_due}} ({{days_to_completion todo.date_due}})</p>
+              </div>
               {{/unless}}
               {{/each}} 
+
             </form>
             {{/if}}
-        </section>
-    </div>
+            </section>
+        </div>
 {{/if}}
-  </div>
 </div>
+
 
 {{#if logged_in}}
 <script src="./js/homepage.js"></script>

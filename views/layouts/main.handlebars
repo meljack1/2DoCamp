@@ -23,12 +23,15 @@
         <header>
             <nav class="font-roboto">
               <ul class="menu">
-                <li class="logo"><a href="/">2DOCamp</a></li>
-                <li class="item"><a href="/">Home</a></li>
-                <li class="item button secondary btn"><a href="/login">Login</a></li>
-                <li class="item button secondary btn"><a href="/login">Sign Up</a></li>
-                <li class="item"><a href="#">Campfire</a></li>
-                <li class="toggle"><span class="bars"></span></li>
+                 <li class="logo"><a href="/">2DOCamp</a></li>
+            <li class="item"><a href="/">Home</a></li>
+
+            {{#if logged_in}}
+            <li id="logout" class="item-button button secondary">Logout</li>
+            {{else}}
+            <li class="item-button button"><a href="/login">Login</a></li>
+            <li class="item-button button secondary"><a href="/login">Sign Up</a></li>
+            {{/if}}
               </ul>
           </nav>
         </header>
@@ -37,9 +40,13 @@
     {{{body}}}
     </div>     
 
-    <div class="footer">
-      <p> &copy 2DOCamp</p>
-    </div>
+  
   </body>
 
+  <footer class="footer">
+      <p> &copy 2DOCamp 2021</p>
+  </footer>
+
 </html>
+
+<script src="./js/logout.js"></script>
