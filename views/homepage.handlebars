@@ -34,10 +34,10 @@
   {{#if logged_in}}
         <div class="grid-task-bar">
           <form id="new-todo-form">
-            <h2>2DO Tasks</h2>
+            <h2>Add New Task</h2>
         <div class="task">
           <label for="task">New Task</label>
-          <input type="text-box" class="text-box" name="task" placeholder="task">
+          <input type="text-box" class="text-box" name="task" placeholder="task" id="task">
           <div class="due-date">
           <label for="date">Due Date</label>
           <input type="date" name="date" id="date" placeholder="date">
@@ -49,29 +49,34 @@
         <br>
         <br>
         <br>
+        
         <!--
         </div>
         -->
-            <button type="submit" class="submit-btn">Submit</button>
-            <button type="reset" class="submit-btn">Reset</button>
-            <button type="menu" class="submit-btn">logs</button>
+        <button type="submit" class="submit-btn">Submit</button>
         </form>
-        <section class="created-to-dos">
+        </div>  
+
+        <div class="grid-task-bar">
+          <h2>Tasks:</h2>
+          <br>
+          <section class="created-to-dos">
          {{#if toDos.length }}
                   <form><br>
-
               {{#each toDos as |todo| }}
               {{#unless todo.completed}}
+              <div class="todo-card">
               <input type="checkbox" id="{{todo.id}}" name="todo" class="font-aleo">
               <label for="{{todo.id}}">{{todo.task}}</label>
-              <p>Date due: {{format_date todo.date_due}}</p>
+              <p>Date due: {{format_date todo.date_due}} ({{days_to_completion todo.date_due}})</p>
+              </div>
               {{/unless}}
               {{/each}} 
 
             </form>
             {{/if}}
-  </section>
-        </div>  
+            </section>
+        </div>
 {{/if}}
 </div>
 
